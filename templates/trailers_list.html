@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>HD Apple Trailers</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+
+<p>
+    Here is List of All HD trailers in iTunes Movie Trailers, 
+    Click on any trailers to download it in your Google Drive in "Apple Trailers" folder
+    if there is no such folder we will make one for you
+</p>
+
+<div class="card-columns">
+{% for tralier in traliers_HD  %}
+
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{tralier.poster}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{tralier.title}}</h5>
+      <p class="card-text">genre {{tralier.genre}}</p>
+      <a href="drive/{{tralier.location}}" class="btn btn-primary">Upload to Drive</a>
+    </div>
+  </div>
+
+
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}

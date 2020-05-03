@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>My Drive</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+<h2>
+    Here is all videos on folder "Apple Trailers" in your google drive
+</h2>
+
+<ul>
+
+{% for video in videos %}
+
+<div class="col-3">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{video.thumbnailLink}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{video.name}}</h5>
+      <p class="card-text">size : {{video.size}} Byte</p>
+      <a href="{{video.webContentLink}}" class="btn btn-primary">Download</a>
+      <a href="youtube/{{video.id}}?name={{video.name}}&url={{video.webContentLink}}" class="btn btn-primary">Upload to Youtube</a>
+
+    </div>
+  </div>
+
+</div>
+{% endfor %}
+</ul>
+</div>
+{% endblock %}

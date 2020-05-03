@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Login</title>
+{% endblock %}
+
+
+{% block body %}
+<div style="height: 50px;"></div>
+<div class="container">
+    <h2>First you need to login with your google account</h2>
+    <p style="text-align: center;">
+<a href="login"><img src="{{url_for('static', filename='google.png')}}" alt=""></a></p>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+
+
+{% extends "base.html" %}
+
+{% block head %}
+<title>Drive</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Upload your video to</h1>
+<p>this might not work if video is big</p>
+<form action="sent" method="post">
+
+<input type="text" name="name" id="" value="{{name}}" >
+<input type="text" name="url" id="" value="{{url}}" >
+<input type="text" name="title" id="" placeholder="title">
+<input type="text" name="description" id="" placeholder="description">
+<input type="number" name="categoryId" id="" placeholder="categoryId">
+
+
+<input type="submit" value="Submit">
+</form>
+
+{% endblock %}
